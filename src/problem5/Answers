@@ -1,0 +1,14 @@
+1)Dependency arrows in the original design:
+EnrollmentService ───► CsvStudentStore
+EnrollmentService ───► EmailSender
+The arrow goes from the high-level policy (EnrollmentService) to the low-level details.
+
+2)The two added abstractions should live near EnrollmentService,
+because the abstractions should be defined from the needs of the high-level policy,
+not the low-level CSV/e-mail details
+
+6)DIP is the design principle saying high-level modules should depend
+on abstractions rather than concrete low-level classes
+DI is the technique of providing those dependencies from outside the class.
+In question 3, we used dependency injection because dependencies are passed through the constructor
+In question 4, we used dependency inversion because concrete details implement abstractions required by EnrollmentService

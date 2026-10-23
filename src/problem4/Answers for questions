@@ -1,0 +1,4 @@
+1) following this design, both professor and student have methods they do not need , for professor it has 2
+irrelevant methods while for student it has 3
+2) if gradeExam(String code) becomes gradeExam(String code, int examId), then the UniversityMember interface changes
+o every class implementing it must be updated/recompiled, including Student, even though students never grade exams.
